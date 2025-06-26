@@ -1,0 +1,31 @@
+import random
+import string
+password=[]
+num=[0,1,2,3,4,5,6,7,8,9,10]
+ascii = string.ascii_letters
+symbols = string.punctuation
+
+recuest_user=int(input('How many chapter do you need in the password? '))
+recuest_user_2=int (input('How many characters do you want in the password? '))
+recuest_user_3=int (input(' How many symbols do you want in the password? '))
+recuest_user_4=int (input(' How many numbers do you want in the password? '))
+if recuest_user_2+recuest_user_3+recuest_user_4==recuest_user:
+   
+
+    for _ in range(recuest_user_2):
+     random_ascii = random.choice(ascii)
+     password.append(random_ascii)
+    for _ in range(recuest_user_3):
+     randome_symbol = random.choice(symbols)
+     password.append(randome_symbol)
+    for _ in range(recuest_user_4):
+     random_num = random.choice(num)
+     password.append(random_num)
+     password_str=''.join(str(c)for c in password)
+    print(f'generator password is : {password_str}')      
+else:
+    print('invalid choice')      
+      
+      
+    
+
